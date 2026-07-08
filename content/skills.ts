@@ -6,15 +6,15 @@ export type SkillCategory = {
 export const skillCategories: SkillCategory[] = [
   {
     name: 'Languages',
-    skills: ['Python', 'SQL', 'R', 'TypeScript', 'Bash'],
+    skills: ['Python', 'SQL', 'R', 'VBA', 'Bash'],
   },
   {
     name: 'Data Engineering',
-    skills: ['Apache Airflow', 'dbt', 'Apache Spark', 'ETL / ELT', 'Data Modeling'],
+    skills: ['Apache Airflow', 'Apache Spark', 'ETL / ELT', 'Data Modeling'],
   },
   {
     name: 'Cloud & Infrastructure',
-    skills: ['AWS S3', 'AWS Glue', 'AWS Lambda', 'GCP BigQuery', 'Docker'],
+    skills: ['GCP BigQuery', 'Docker'],
   },
   {
     name: 'Databases',
@@ -30,6 +30,6 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: 'Tools & Frameworks',
-    skills: ['Git', 'Jupyter', 'Next.js', 'React', 'dbt Cloud'],
+    skills: ['Git', 'Jupyter'],
   },
 ];
