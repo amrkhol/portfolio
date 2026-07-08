@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'Amr El-Kholy',
-  title: 'Data Scientist',
+  title: 'Senior Data Analyst',
   tagline: 'I turn messy data into models, insights, and decisions.',
   email: 'amrelkholy1996@gmail.com',
   github: 'https://github.com/amrelkholy',
