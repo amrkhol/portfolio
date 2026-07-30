@@ -15,6 +15,28 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: 'nyc-taxi-trips-analysis',
+    title: 'NYC Yellow Taxi Trip Analysis — SQL & pandas',
+    description:
+      'Analytical deep-dive on NYC Yellow Taxi trip records, answered twice in parallel — once in PostgreSQL and once in pandas — spanning filtering, aggregation, window functions, CTEs, and CASE-based binning to profile fares, tips, demand by hour, and trip-distance behaviour.',
+    problem:
+      'The NYC TLC Yellow Taxi dataset (Jan 2015) holds millions of trip records with fares, tips, passenger counts, timestamps, and pickup/dropoff coordinates. The goal was to answer a battery of operational questions — which payment types drive revenue, how demand shifts by hour and day, how tips scale with fare and distance, and how trips distribute across distance bands — and to prove the same analysis can be expressed cleanly in both a relational (SQL) and a dataframe (pandas) idiom.',
+    approach:
+      'Loaded the trip CSV and defined a typed PostgreSQL schema for the same data. Twenty analytical questions were implemented in both engines and organised into five sections: filtering and sorting (WHERE / boolean masks), grouped aggregations (GROUP BY / groupby-agg), time features via timestamp extraction, window functions, and CTE/CASE segmentation. Window functions were mirrored end-to-end — COUNT/SUM OVER (PARTITION BY …) maps to groupby.transform, RANK() to rank(method="min"), and running cumulative sums to sorted groupby.cumsum. CASE distance bands were aligned to pandas pd.cut(include_lowest=True) so that zero-mile trips fall in the first band identically. Every question was then reconciled 1:1 by running both engines against the same file (DuckDB for SQL, pandas for the notebook) and asserting equality — surfacing and fixing real divergences, such as a band boundary that had been silently dropping 187 zero-distance trips.',
+    results: [
+      'All 20 questions reconciled 1:1 between SQL and pandas on 32,273 trips — a verified side-by-side reference for each idiom',
+      'Card payments (type 1) rank #1 by revenue at $328K of $478K total; RANK() and rank(method="min") agree exactly',
+      'Trip-distance bands show 60% of trips are 0–2 mi, with average tip climbing from $0.93 (0–2 mi) to $5.92 (10+ mi)',
+      'Demand peaks at 19:00 (2,560 trips); pickup-hour and day-of-month profiles built identically via EXTRACT and dt accessors',
+      'Window functions demonstrated across partitioned counts, revenue ranks, and per-group running vs total revenue',
+      'Reconciliation caught a distance-band edge case (0-mile trips) that a naive BETWEEN / >0 filter had been misclassifying',
+    ],
+    tags: ['SQL', 'PostgreSQL', 'Window Functions', 'CTEs', 'Python', 'pandas', 'NumPy', 'Jupyter', 'EDA'],
+    notebook: '/notebooks/nyc-taxi-trips-analysis.ipynb',
+    report: '/notebooks/nyc-taxi-trips-analysis.sql',
+    github: 'https://github.com/amrelkholy',
+  },
+  {
     slug: 'network-portfolio-optimization',
     title: 'Network Stock Portfolio Optimization',
     description:
