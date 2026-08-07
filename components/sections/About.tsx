@@ -12,13 +12,21 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
               <p>
-                I&apos;m a data scientist with 5+ years turning data into decisions —
+                I&apos;m a data scientist with 7+ years turning data into decisions —
                 hands-on with SQL, Python, machine learning, Tableau, and Power BI across
                 the full data workflow from raw data to insight.
               </p>
               <p>
+                Most recently I spent four years as a Senior Data Analyst at NYU, where I built
+                the data infrastructure behind the university&apos;s federally negotiated F&amp;A
+                rate model and a reporting hub of 200+ automated reports used by executive
+                leadership, 1,000+ Principal Investigators, and federal agencies including NASA,
+                NSF, NIH, and the DoD.
+              </p>
+              <p>
                 I care about the full data journey: from raw CSV to a model you can trust,
-                from an ad-hoc question to a dashboard your whole team actually uses.
+                from an ad-hoc question to a dashboard your whole team actually uses — built on
+                pipelines that hold up to an audit.
               </p>
               <p>
                 I&apos;m actively targeting data science roles where I can apply machine learning
@@ -77,12 +85,15 @@ export default function About() {
                     school: 'New York University',
                     degree: 'M.S. in Quantitative Management',
                     meta: 'New York, NY · 2026',
+                    detail:
+                      'Coursework: Machine Learning, Statistical Modeling, Predictive Analytics, Data Visualization, Optimization & Decision Analysis, Database Systems, Financial Analytics.',
                   },
                   {
                     school: 'Massachusetts Institute of Technology (MIT)',
                     degree: 'Applied AI & Data Science Program',
                     meta: '2026',
-                    detail: 'Focus: Machine Learning & Deep Learning — neural networks and predictive modeling in Python.',
+                    detail:
+                      'Focus: Machine Learning, Deep Learning & Recommendation Systems — neural networks and predictive modeling in Python.',
                   },
                   {
                     school: 'Rutgers Business School',
@@ -107,9 +118,9 @@ export default function About() {
 
             <div className="grid grid-cols-3 gap-3">
               {[
-                { value: '5+', label: 'Years in data' },
-                { value: '20+', label: 'Projects shipped' },
-                { value: '3', label: 'Tools built' },
+                { value: '7+', label: 'Years in data' },
+                { value: '200+', label: 'Automated reports' },
+                { value: '1,000+', label: 'Researchers served' },
               ].map(({ value, label }) => (
                 <div
                   key={label}

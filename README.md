@@ -22,12 +22,13 @@ portfolio/
 │   └── projects/[slug]/page.tsx # Project detail pages (statically generated)
 ├── components/
 │   ├── layout/   Navbar, Footer
-│   ├── sections/ Hero, About, Skills, Projects, Contact
+│   ├── sections/ Hero, About, Experience, Skills, Projects, Contact
 │   └── ui/       ProjectCard, TechTag, ThemeToggle
 ├── content/
-│   ├── meta.ts      ← site-wide name, links, tagline — edit this first
-│   ├── projects.ts  ← add / edit projects here
-│   └── skills.ts    ← add / edit skill categories here
+│   ├── meta.ts        ← site-wide name, links, tagline — edit this first
+│   ├── experience.ts  ← work history (mirrors the resume)
+│   ├── projects.ts    ← add / edit projects here
+│   └── skills.ts      ← add / edit skill categories here
 └── lib/
     ├── theme.ts     # useTheme hook (dark/light + localStorage)
     └── utils.ts     # cn() class helper
@@ -58,6 +59,11 @@ Add a new object to the `projects` array. Required fields:
 
 **Skills** → `content/skills.ts`
 Add or remove categories and skill names in the `skillCategories` array.
+
+**Work history** → `content/experience.ts`
+Mirrors the PDF at `public/resume.pdf` — keep the two in sync. Each role needs
+`company`, `title`, `location`, `period`, `summary`, `highlights[]`, and `tags[]`.
+The Experience timeline shows the first 3 highlights and collapses the rest.
 
 ## Deploy to Vercel
 

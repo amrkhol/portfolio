@@ -10,26 +10,43 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: 'Data Engineering',
-    skills: ['Apache Airflow', 'Apache Spark', 'ETL / ELT', 'Data Modeling'],
+    skills: ['Apache Airflow', 'dbt', 'ETL / ELT', 'Data Modeling', 'Apache Spark'],
   },
   {
     name: 'Cloud & Infrastructure',
-    skills: ['GCP BigQuery', 'Docker'],
+    skills: ['Docker', 'GCP BigQuery', 'Git'],
   },
   {
     name: 'Databases',
-    skills: ['PostgreSQL', 'MySQL', 'Snowflake', 'BigQuery', 'Supabase'],
+    skills: ['SQL Server', 'PostgreSQL', 'MySQL', 'Snowflake', 'BigQuery', 'Supabase', 'MS Access'],
   },
   {
-    name: 'Visualization',
-    skills: ['Tableau', 'Power BI', 'D3.js', 'Recharts', 'Matplotlib'],
+    name: 'Business Intelligence',
+    skills: ['Power BI', 'Tableau', 'OBIEE', 'DAX', 'Excel', 'D3.js', 'Recharts', 'Matplotlib'],
   },
   {
     name: 'ML & Analytics',
-    skills: ['scikit-learn', 'pandas', 'NumPy', 'Prophet', 'A/B Testing', 'Statistics'],
+    skills: [
+      'scikit-learn',
+      'pandas',
+      'NumPy',
+      'Forecasting',
+      'Prophet',
+      'A/B Testing',
+      'Statistics',
+    ],
   },
   {
-    name: 'Tools & Frameworks',
-    skills: ['Git', 'Jupyter'],
+    name: 'Domain & Governance',
+    skills: [
+      'F&A rate modeling',
+      'Financial analysis',
+      'Data quality & reconciliation',
+      'Federal compliance reporting',
+    ],
+  },
+  {
+    name: 'Ways of working',
+    skills: ['Business analysis', 'Stakeholder management', 'Mentoring', 'Jira', 'Asana', 'Jupyter'],
   },
 ];
