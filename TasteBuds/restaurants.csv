@@ -1,0 +1,16 @@
+restaurant_id,name,cuisine,city,rating
+101,Bella Napoli,Indian,New York,4.4
+102,Taco Junction,Thai,Seattle,4.4
+103,Golden Wok,American,Seattle,4.9
+104,Spice Route,Chinese,Chicago,4.9
+105,Smokehouse 61,Chinese,Chicago,4.7
+106,Bangkok Bites,Thai,Chicago,4.1
+107,Sakura House,Chinese,New York,4.7
+108,Pasta Vita,Italian,New York,4.4
+109,El Corazon,Chinese,Seattle,3.7
+110,Dragon Pearl,Italian,Seattle,4.7
+111,Curry Leaf,Thai,Austin,4.3
+112,Liberty Grill,Thai,Austin,3.6
+113,Thai Orchid,Mexican,Chicago,3.9
+114,Tokyo Table,Italian,Austin,4.0
+115,Trattoria Sole,Chinese,Miami,4.0

@@ -37,6 +37,29 @@ export const projects: Project[] = [
     github: 'https://github.com/amrelkholy',
   },
   {
+    slug: 'tastebuds-food-delivery-analysis',
+    title: 'TasteBuds Food Delivery Analytics — SQL & pandas',
+    description:
+      'Twenty business questions on a four-table food-delivery marketplace — GMV, cancellation rate, cohorts, ARPU, courier service quality and data integrity — answered twice in parallel, once in PostgreSQL and once in pandas, then reconciled 1:1 across both engines.',
+    problem:
+      'A food-delivery marketplace generates a relational trail across four tables — couriers, customers, restaurants, and 420 orders spanning Jan–Jun 2025 — but the operating questions live in the joins between them. Which cuisines and restaurants actually earn money, how much demand is lost to cancellation, who reorders, which cities are slow, which couriers are carrying the network. The goal was to answer that battery of questions in both a relational (SQL) and a dataframe (pandas) idiom, and to prove the two agree rather than assume it.',
+    approach:
+      'Defined a typed PostgreSQL schema with real keys and foreign-key constraints, replacing a draft schema that had stored IDs and delivery times as VARCHAR and forced casts into every aggregate. Twenty questions were then implemented in both engines across six sections: revenue and order health, customer retention, time-series window functions, service quality, ranking and per-group comparisons, and data-quality checks. Window functions were mirrored end-to-end — LAG for month-over-month change maps to shift/pct_change, a running SUM OVER to cumsum, RANK() / DENSE_RANK() to rank(method="min") / rank(method="dense"), and AVG(...) OVER (PARTITION BY customer_id) to groupby.transform("mean"). Three modelling decisions were fixed once and held throughout — revenue always means delivered revenue, "city" always means the customer\'s city, and rating always means the score left on the order — because each of the four tables carries its own city column and both orders and restaurants carry a rating. Every answer was then reconciled by having DuckDB read the same four CSVs independently of pandas and asserting the two engines return identical values.',
+    results: [
+      'All 20 questions reconcile exactly between SQL and pandas, asserted in-notebook against DuckDB reading the same source CSVs',
+      'Reconciliation and cleanup caught four real defects in the draft: an AOV computed over cancelled orders, top-revenue rankings missing the delivered filter, a never-ordered anti-join built from all orders instead of delivered ones, and a cancellation rate measured in dollars rather than orders',
+      'Top-spender query grouped by customer_id rather than name — 120 customers share only 103 names, and grouping by name fused two different people into one phantom $545.86 spender',
+      'GMV of $16,413.67 across 341 delivered of 420 orders; an 18.81% cancellation rate costs roughly a fifth of demand before it converts',
+      'Chinese, Thai and Italian cuisines carry 79% of revenue; New York alone is 30.8%, more than Seattle and Miami combined, while ranking second-slowest at 45.5 average delivery minutes',
+      '113 of 120 registered customers are active, ARPU is $145.25, and 82.3% of them reorder — retention, not acquisition, is what the marketplace runs on',
+      'Ten data-quality invariants — status/rating consistency, rating scale, positive totals, no duplicate keys, and all three foreign keys — pass at zero violations',
+    ],
+    tags: ['SQL', 'PostgreSQL', 'Window Functions', 'CTEs', 'DuckDB', 'Python', 'pandas', 'Jupyter', 'Data Quality'],
+    notebook: '/notebooks/tastebuds-food-delivery-analysis.ipynb',
+    report: '/notebooks/tastebuds-food-delivery-analysis.sql',
+    github: 'https://github.com/amrelkholy',
+  },
+  {
     slug: 'network-portfolio-optimization',
     title: 'Network Stock Portfolio Optimization',
     description:

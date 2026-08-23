@@ -1,0 +1,121 @@
+customer_id,name,city,signup_date
+1,Kira Shah,Seattle,2024-09-02
+2,Sara Reyes,Austin,2025-01-14
+3,Ravi Chen,New York,2024-09-22
+4,Nate Reyes,Chicago,2024-09-24
+5,Nate Ng,Miami,2024-09-19
+6,Vic Cole,Miami,2024-09-10
+7,Tom Ross,New York,2024-10-16
+8,Sara Park,Chicago,2024-11-06
+9,Ella Ford,New York,2025-01-18
+10,Sara Park,Chicago,2024-09-25
+11,Tom Cole,Chicago,2024-11-16
+12,Sara Bianchi,New York,2025-01-14
+13,Uma Chen,Seattle,2025-01-05
+14,Zoe Kim,Seattle,2025-01-28
+15,Omar Kim,Austin,2024-10-28
+16,Finn Bianchi,Chicago,2024-09-25
+17,Jae Ford,Seattle,2024-11-26
+18,Omar Diaz,Miami,2024-09-17
+19,Ravi Ross,Chicago,2024-11-17
+20,Pia Ross,New York,2024-09-28
+21,Sara Iyer,Austin,2024-11-26
+22,Leo Iyer,Seattle,2025-01-26
+23,Omar Reyes,New York,2024-11-07
+24,Xander Cole,New York,2024-09-12
+25,Xander Diaz,Miami,2024-12-19
+26,Xander Ross,Austin,2024-09-08
+27,Leo Shah,Miami,2024-09-23
+28,Ben Chen,Austin,2024-10-12
+29,Hank Ross,Seattle,2024-12-16
+30,Finn Vale,Seattle,2025-01-03
+31,Ella Park,Seattle,2025-01-03
+32,Xander Ross,Austin,2024-12-03
+33,Ella Reyes,Chicago,2024-10-04
+34,Wren Chen,New York,2024-12-28
+35,Tom Shah,Austin,2024-10-31
+36,Ella Ross,Miami,2024-11-24
+37,Tom Kim,Chicago,2025-01-08
+38,Vic Cole,New York,2024-12-29
+39,Zoe Park,Miami,2024-12-06
+40,Mona Ross,New York,2024-12-25
+41,Mona Ng,Chicago,2024-09-19
+42,Omar Shah,New York,2024-11-24
+43,Ben Reyes,New York,2025-01-16
+44,Sara Reyes,Austin,2025-01-14
+45,Cara Park,Chicago,2025-01-20
+46,Ella Cole,Austin,2024-11-24
+47,Leo Vale,New York,2024-09-29
+48,Pia Vale,Seattle,2024-12-19
+49,Cara Shah,New York,2024-11-26
+50,Isla Vale,Chicago,2024-12-30
+51,Gina Ford,Austin,2024-10-12
+52,Sara Nowak,New York,2025-01-03
+53,Vic Park,New York,2024-11-08
+54,Leo Nowak,Chicago,2024-11-27
+55,Hank Ford,Miami,2025-01-04
+56,Vic Chen,Miami,2024-10-28
+57,Hank Park,Seattle,2024-10-19
+58,Ravi Vale,Austin,2024-09-01
+59,Isla Vale,Austin,2024-10-27
+60,Uma Kim,Seattle,2024-11-20
+61,Cara Chen,New York,2024-10-23
+62,Gina Kim,Chicago,2024-12-24
+63,Uma Park,New York,2024-12-29
+64,Vic Kim,New York,2024-09-30
+65,Mona Osei,Chicago,2024-12-29
+66,Finn Ross,Austin,2024-09-28
+67,Yara Ross,Seattle,2024-12-11
+68,Cara Bianchi,Chicago,2024-10-03
+69,Ava Shah,Miami,2024-12-27
+70,Vic Shah,Miami,2025-01-21
+71,Wren Nowak,Austin,2024-10-09
+72,Sara Shah,New York,2024-09-13
+73,Yara Cole,New York,2025-01-10
+74,Ella Ross,Chicago,2024-10-16
+75,Isla Chen,Austin,2025-01-02
+76,Zoe Iyer,Austin,2024-11-08
+77,Nate Park,Chicago,2024-09-15
+78,Yara Kim,Seattle,2025-01-27
+79,Ravi Ross,Miami,2024-10-09
+80,Ella Ford,Miami,2024-09-14
+81,Omar Osei,Chicago,2025-01-14
+82,Zoe Osei,Chicago,2024-10-03
+83,Pia Iyer,New York,2024-12-30
+84,Kira Cole,Miami,2025-01-07
+85,Pia Osei,New York,2024-12-30
+86,Hank Chen,Austin,2024-09-13
+87,Dan Ford,Seattle,2024-12-30
+88,Zoe Nowak,New York,2024-12-20
+89,Uma Ford,Miami,2025-01-02
+90,Xander Diaz,Seattle,2025-01-07
+91,Pia Ford,Chicago,2025-01-13
+92,Isla Nowak,Miami,2024-10-29
+93,Omar Shah,Seattle,2024-09-22
+94,Omar Kim,New York,2024-10-22
+95,Cara Chen,Austin,2024-09-30
+96,Zoe Shah,Austin,2024-10-05
+97,Ella Vale,Chicago,2024-09-22
+98,Pia Shah,Chicago,2024-10-12
+99,Nate Ford,Seattle,2024-11-21
+100,Gina Kim,Austin,2024-09-27
+101,Leo Ng,Austin,2025-01-06
+102,Omar Bianchi,New York,2024-12-05
+103,Ravi Iyer,Austin,2024-12-31
+104,Dan Nowak,Chicago,2024-09-17
+105,Isla Diaz,New York,2024-10-05
+106,Zoe Shah,Seattle,2024-11-06
+107,Ella Ford,Miami,2025-01-21
+108,Xander Kim,New York,2024-10-31
+109,Xander Shah,Seattle,2024-09-20
+110,Ava Cole,New York,2024-11-01
+111,Uma Park,Chicago,2024-09-20
+112,Dan Vale,New York,2024-11-23
+113,Nate Nowak,Austin,2025-01-16
+114,Ben Ford,Chicago,2024-09-18
+115,Isla Ng,Chicago,2024-10-30
+116,Jae Cole,Austin,2025-01-11
+117,Gina Diaz,Seattle,2025-01-09
+118,Finn Diaz,Austin,2024-09-05
+119,Ben Ng,New York,2025-01-07
+120,Gina Ford,Seattle,2024-10-30
