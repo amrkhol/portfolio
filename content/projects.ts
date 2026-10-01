@@ -60,6 +60,28 @@ export const projects: Project[] = [
     github: 'https://github.com/amrelkholy',
   },
   {
+    slug: 'crypto-correlation-network',
+    title: 'Crypto Correlation Network — The Same Method, The Opposite Answer',
+    description:
+      'The S&P 500 network method re-pointed at the top 150 crypto assets. Mean pairwise correlation comes back at 0.459 against the equity market\'s 0.201, the central book tracks an equal-weighted universe index to within a fifth of a point, and the peripheral result flips sign.',
+    problem:
+      'A method that produces a result on one dataset has not been tested. The S&P 500 study found peripheral stocks outperforming over a short window, which is exactly the kind of finding that evaporates on contact with a second sample. Crypto is the hardest available re-test: no index provider hands you a universe, the data is dirty in ways equity data is not, correlations are far higher, and the asset class trades every day of the year. The question was whether the network structure means anything once the market changes, and — more honestly — whether the earlier result survives.',
+    approach:
+      'Built the universe from CoinGecko market cap rather than an index membership list, keyed on CoinGecko\'s unique id rather than symbol (the wrapped-tokens category contains a token whose symbol is literally BTC, so symbol matching silently deletes Bitcoin). Four screens then run before any analysis: a volatility floor removes pegged assets that would fake a periphery; a 0.99 correlation ceiling collapses wrapped and liquid-staked near-duplicates that would otherwise win every edge at a Mantegna distance of 0.04; a 500%-daily-move rule drops Yahoo placeholder prices, one of which reads as a 69,000% single-day return; and a distinctness threshold drops sub-cent tokens whose six-significant-figure quotes make every tick look like a 50% move. Daily bars are fetched and resampled to weekly locally, because Yahoo anchors weekly bars to each request\'s first date and two batches return incompatible calendars. From there the method is identical to the equity study — Mantegna distance, Kruskal MST, centrality from the percentile ranks of degree and betweenness — with annualisation at 365 days and both BTC and an equal-weighted universe index as benchmarks.',
+    results: [
+      'Crypto\'s mean pairwise correlation is 0.459 against the S&P 500\'s 0.201 over the same formation window — more than twice as internally correlated, which is the quantitative form of "there is one trade on"',
+      'Centrality is market beta, almost exactly: the central book returned +62.90% against the equal-weighted universe\'s +62.72%, a gap of 18 basis points over three months',
+      'The peripheral result flips sign versus the equity study — +36.43% against the universe\'s +62.72% — which is the point of re-testing rather than a failure of it',
+      'The periphery earned its keep on risk, not return: 38.7% annualised volatility against the universe\'s 47.9%, with a shallower drawdown. It was level with the market for eleven of thirteen weeks and lost seventeen points in the final fortnight as the rally steepened — low beta behaving exactly as low beta does',
+      'The hub is The Graph, not Bitcoin (degree 19 vs 4). An asset with no idiosyncratic narrative tracks aggregate risk appetite better than the one everyone calls the market',
+      'Of the 15 peripheral assets, 4 are exchange tokens, 3 are tokenised metals and 2 are privacy coins — nine of fifteen priced by something other than crypto risk appetite, which is less a diversifier discovered inside crypto than the part of the universe that was never crypto exposure',
+      'Adds the like-for-like benchmark the equity study was missing: comparing equal-weighted books against a cap-weighted index confounds selection with the equal-weight effect',
+    ],
+    tags: ['Python', 'NetworkX', 'Graph Theory', 'MST', 'CoinGecko API', 'yfinance', 'pandas', 'NumPy', 'Plotly', 'Data Quality', 'Backtesting'],
+    report: '/notebooks/crypto-mst-analysis.html',
+    github: 'https://github.com/amrkhol',
+  },
+  {
     slug: 'network-portfolio-optimization',
     title: 'S&P 500 Correlation Network — Central vs Peripheral Portfolios',
     description:
